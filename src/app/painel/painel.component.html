@@ -14,11 +14,13 @@
     <div class="col-12">
       <div class="form-group">
         <div class="row">
-          <span class="col-12 my-1"><strong>Traduza uma frase:</strong></span>
-          <span class="col-12 my-1">How are you?</span>
+          <div class="col mt-3">
+            <h6>{{instrucao}}</h6>
+            <p>{{frases[0].fraseEng}}</p>
+          </div>
 
-          <div class="col-12 my-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div class="col-12 my-2">
+            <textarea class="form-control" id="exampleFormControlTextarea1" (input)="atualizarResposta($event)" rows="3"></textarea>
           </div>
           <div class="col-12">
             <button type="button" class="btn btn-primary float-right">Verificar</button>
