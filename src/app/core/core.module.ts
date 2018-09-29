@@ -8,6 +8,6 @@ import { ProgressComponent } from './progress/progress.component';
     CommonModule
   ],
   declarations: [NavbarComponent, ProgressComponent],
-  exports: [NavbarComponent],
+  exports: [NavbarComponent, ProgressComponent],
 })
 export class CoreModule { }

@@ -6,6 +6,7 @@ import { TentativasComponent } from './tentativas/tentativas.component';
   imports: [
     CommonModule
   ],
-  declarations: [TentativasComponent]
+  declarations: [TentativasComponent],
+  exports: [TentativasComponent]
 })
 export class SharedModule { }
