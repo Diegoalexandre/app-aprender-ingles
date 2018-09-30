@@ -6,15 +6,19 @@ export const FRASES: FrasesModel[] = [
     frasePtBr: 'Como você está?'
   },
   {
-    fraseEng: 'I like to learn',
-    frasePtBr: 'Eu gosto de aprender'
+    fraseEng: 'My name is Diego',
+    frasePtBr: 'Meu nome é Diego'
   },
   {
-    fraseEng: 'I watch tv',
-    frasePtBr: 'Eu assisto tv'
+    fraseEng: 'Whats your name?',
+    frasePtBr: 'Qual seu nome?'
   },
   {
-    fraseEng: 'I eat bread',
-    frasePtBr: 'Eu como pão'
+    fraseEng: 'Open source, get and implement!',
+    frasePtBr: 'Código aberto, obtenha e implemente!'
+  },
+  {
+    fraseEng: 'I to like pizza',
+    frasePtBr: 'Eu gosto de pizza'
   }
 ];

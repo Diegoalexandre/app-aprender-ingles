@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tentativas',
@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TentativasComponent implements OnInit {
 
-  coracaoVazio = '/assets/coracao_vazio.png';
-  coracaoCheio = '/assets/coracao_cheio.png';
+  @Input() life = [];
+
+  heat = [];
+
+
+  // coracaoVazio = '/assets/coracao_vazio.png';
+  // coracaoCheio = '/assets/coracao_cheio.png';
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.life);
   }
 
 }

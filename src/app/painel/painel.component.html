@@ -1,12 +1,12 @@
-<div class="jumbotron my-3">
+<div class="jumbotron my-3" *ngIf="erro > 0 && !win">
   <div class="row">
 
     <div class="col-sm-6">
-      <app-progress></app-progress>
+      <app-progress [valueProgress]="progress"></app-progress>
     </div>
 
     <div class="col-sm-6">
-      <app-tentativas></app-tentativas>
+      <app-tentativas [life]="life"></app-tentativas>
     </div>
   </div>
   <div class="row">
@@ -16,19 +16,44 @@
         <div class="row">
           <div class="col mt-3">
             <h6>{{instrucao}}</h6>
-            <p>{{frases[0].fraseEng}}</p>
+            <p>{{frases[indice].fraseEng}}</p>
           </div>
 
           <div class="col-12 my-2">
-            <textarea class="form-control" id="exampleFormControlTextarea1" (input)="atualizarResposta($event)" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" (input)="atualizarResposta($event)"
+              #textArea rows="3"></textarea>
           </div>
           <div class="col-12">
-            <button type="button" class="btn btn-primary float-right">Verificar</button>
+            <button type="button" class="btn btn-primary float-right" [disabled]="status" (click)="verificar()">Verificar</button>
           </div>
 
         </div>
       </div>
     </div>
 
+  </div>
+</div>
+
+<div class="game-over jumbotron mt-4" *ngIf="erro === 0 && !win">
+
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <h2>GAME OVER</h2>
+    </div>
+    <div class="col-12 d-flex justify-content-center mt-3">
+      <img src="https://media.giphy.com/media/Cy0k4KW0T33JS/giphy.gif" alt="">
+    </div>
+  </div>
+
+</div>
+
+<div class="win jumbotron mt-4" *ngIf="win">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <h2>Win!!!</h2>
+    </div>
+    <div class="col-12 d-flex justify-content-center mt-3">
+      <img src="https://media1.tenor.com/images/4869c336eb8589454f7dc3582d623eb5/tenor.gif?itemid=6247482" alt="">
+    </div>
   </div>
 </div>
